@@ -16,7 +16,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2.2.1
         with:
-          python-version: 3.7
+          python-version: 3.9
       - name: CycloneDX Python Generate SBOM
         uses: CycloneDX/gh-python-generate-sbom@v1.0.0
     
@@ -24,6 +24,10 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2.2.1
+        with:
+          python-version: 3.8
       - name: CycloneDX Python Generate SBOM
         uses: CycloneDX/gh-python-generate-sbom@v1.0.0
     
